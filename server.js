@@ -35,8 +35,20 @@ connectDB();
 
 // Enable CORS for all routes
 app.use((req, res, next) => {
+  // Allow specific origins or use wildcard
+  const allowedOrigins = [
+    'https://newf-ten.vercel.app',
+    'https://newf-roan.vercel.app',
+    'https://newf-chi.vercel.app'
+  ];
+  
+  // Set to '*' to allow all origins, or check if origin is in allowed list
   res.header('Access-Control-Allow-Origin', '*');
+  
+  // Allow all methods
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  
+  // Allow all headers
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   
   // Handle preflight requests
