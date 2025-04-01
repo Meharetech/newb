@@ -34,7 +34,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3012'],
+  origin: ['https://newf-roan.vercel.app', 'http://localhost:3012'],
   credentials: true
 }));
 app.use(express.json({ limit: '50mb' }));
