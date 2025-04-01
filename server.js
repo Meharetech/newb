@@ -34,7 +34,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ['https://newf-roan.vercel.app', 'http://localhost:3012'],
+  origin: '*',  // Allow all origins
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   exposedHeaders: ['Content-Range', 'X-Content-Range'],
