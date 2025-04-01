@@ -35,10 +35,9 @@ connectDB();
 // Middleware
 app.use(cors({
   origin: '*',  // Allow all origins
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  methods: '*',  // Allow all methods
+  allowedHeaders: '*',  // Allow all headers
   exposedHeaders: ['Content-Range', 'X-Content-Range'],
-  credentials: true,
   preflightContinue: false,
   optionsSuccessStatus: 204
 }));
